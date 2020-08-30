@@ -1,0 +1,5 @@
+apfs-fuse (20200708-1kaisen1) kaisen-testing; urgency=medium
+
+  * First packaging for Kaisen Linux
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisen-linux.org>  Sun, 30 Aug 2020 10:03:24 +0200
