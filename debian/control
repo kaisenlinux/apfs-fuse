@@ -2,7 +2,7 @@ Source: apfs-fuse
 Priority: optional
 Section: otherfs
 Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisen-linux.org>
-Build-Depends: fuse3, libfuse3-dev, bzip2, libbz2-dev, cmake, gcc, libattr1-dev, zlib1g-dev
+Build-Depends: debhelper, fuse3, libfuse3-dev, bzip2, libbz2-dev, cmake, gcc, libattr1-dev, zlib1g-dev
 Standards-Version: 4.5.0
 Homepage: https://github.com/sgan81/apfs-fuse
 Vcs-Git: https://gitlab.com/kaisenlinux/packages/apfs-fuse.git
