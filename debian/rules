@@ -2,18 +2,3 @@
 
 %:
 	dh $@ --buildsystem=cmake
-
-override_dh_auto_configure:
-	dh_auto_configure -- \
-	-DCMAKE_LIBRARY_ARCHITECTURE="$(DEB_TARGET_MULTIARCH)"
-
-override_dh_auto_install:
-	mkdir -p debian/apfs-fuse/usr/bin
-	mkdir -p debian/apfsutil/usr/bin
-	mkdir -p debian/apfs-dump/usr/bin
-	mkdir -p debian/apfs-dump-quick/usr/bin
-	mv obj-x86_64-linux-gnu/apfs-fuse debian/apfs-fuse/usr/bin
-	mv obj-x86_64-linux-gnu/apfsutil debian/apfsutil/usr/bin
-	mv obj-x86_64-linux-gnu/apfs-dump debian/apfs-dump/usr/bin
-	mv obj-x86_64-linux-gnu/apfs-dump-quick debian/apfs-dump-quick/usr/bin
-	

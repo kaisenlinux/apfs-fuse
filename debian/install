@@ -1,0 +1,4 @@
+obj-x86_64-linux-gnu/apfs-fuse usr/bin
+obj-x86_64-linux-gnu/apfsutil usr/bin
+obj-x86_64-linux-gnu/apfs-dump usr/bin
+obj-x86_64-linux-gnu/apfs-dump-quick usr/bin

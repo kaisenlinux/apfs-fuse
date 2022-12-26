@@ -1,47 +1,19 @@
 Source: apfs-fuse
 Priority: optional
 Section: otherfs
-Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisen-linux.org>
+Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 Build-Depends: debhelper, fuse3, libfuse3-dev, bzip2, libbz2-dev, cmake, gcc, libattr1-dev, zlib1g-dev
-Standards-Version: 4.5.0
+Standards-Version: 4.6.1
 Homepage: https://github.com/sgan81/apfs-fuse
 Vcs-Git: https://gitlab.com/kaisenlinux/packages/apfs-fuse.git
 Vcs-Browser: https://gitlab.com/kaisenlinux/packages/apfs-fuse.git
 
 Package: apfs-fuse
 Section: otherfs
-Architecture: amd64
+Architecture: amd64 arm64 i386
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libfsapfs1
+Replaces: apfs-dump, apfs-dump-dbgsym, apfs-dump-quick, apfs-dump-quick-dbgsym, apfs-fuse-dbgsym, apfsutil, apfsutil-dbgsym
+Suggests: apfsprogs
 Description: APFS access in FUSE
  apfs-fuse package can you access APFS partitions.
-
-Package: apfsutil
-Section: otherfs
-Architecture: amd64
-Pre-Depends: ${misc:Pre-Depends}
-Depends: apfs-fuse, ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libfsapfs-utils
-Description: Display APFS containers informations
- apfsutil can display APFS containers informations
- It lists, volumes and snapshots if exists.
-
-Package: apfs-dump
-Section: otherfs
-Architecture: amd64
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends}, ${misc:Depends}, apfs-fuse
-Description: Scan whole APFS volume and try to wipe them
- apfs-dump scan the whole volume for clusters having
- correct checksums (and thus being part of some management
- structure), and then it will try to dump them.
-
-Package: apfs-dump-quick
-Section: otherfs
-Architecture: amd64
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends}, ${misc:Depends}, apfs-fuse
-Description: Scan whole APFS volume and try to wipe them (quick version)
- apfs-dump-quick dump the most current version of the disk structure
- into a logfile.

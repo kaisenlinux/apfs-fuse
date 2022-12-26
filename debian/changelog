@@ -1,3 +1,13 @@
+apfs-fuse (20221226-1kaisen) kaisen-packages; urgency=medium
+
+  * Import upstream fixs of several bugs
+  * Several packaging improvements
+  * All binaries are included in the apfs-fuse package
+  * Bump the compat version to 13
+  * Update the copyright file
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Mon, 26 Dec 2022 03:34:48 +0200
+
 apfs-fuse (20200708-1kaisen2) kaisen-packages; urgency=medium
 
   * Add debhelper dependancy
