@@ -1,3 +1,9 @@
+apfs-fuse (20230319-1kaisen) kaisen-packages; urgency=medium
+
+  * Import upstream fixs of several bugs
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sun, 19 Mar 2023 15:58:08 +0200
+
 apfs-fuse (20221226-1kaisen) kaisen-packages; urgency=medium
 
   * Import upstream fixs of several bugs

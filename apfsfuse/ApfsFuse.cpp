@@ -115,6 +115,7 @@ static bool apfs_stat_internal(fuse_ino_t ino, struct stat &st)
 
 	if (!rc)
 	{
+		std::cerr << "Unable to read inode " << ino << std::endl;
 		return false;
 	}
 	else
@@ -384,7 +385,7 @@ static void apfs_lookup(fuse_req_t req, fuse_ino_t ino, const char *name)
 		rc = apfs_stat_internal(res.file_id, e.attr);
 
 		if (g_debug & Dbg_Info)
-			std::cout << "    apfs_stat_internal => " << (rc ? "OK" : "FAIL") << std::endl;
+			std::cout << "    apfs_stat_internal " << res.file_id << " => " << (rc ? "OK" : "FAIL") << std::endl;
 
 		fuse_reply_entry(req, &e);
 	}
@@ -953,6 +954,10 @@ int main(int argc, char *argv[])
 	delete g_container;
 	g_disk_main->Close();
 	delete g_disk_main;
+	if (g_disk_tier2) {
+		g_disk_tier2->Close();
+		delete g_disk_tier2;
+	}
 
 	return err ? 1 : 0;
 }
