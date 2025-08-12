@@ -1,3 +1,9 @@
+apfs-fuse (20230319-2kaisen) kaisen-packages; urgency=medium
+
+  * Rebuild to update depends for Kaisen 3.0
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Thu, 07 Aug 2025 22:33:33 +0200
+
 apfs-fuse (20230319-1kaisen) kaisen-packages; urgency=medium
 
   * Import upstream fixs of several bugs
